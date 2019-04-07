@@ -1,0 +1,77 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>io.nuls.ccc</groupId>
+    <artifactId>nuls.roll</artifactId>
+    <version>1.0.0</version>
+
+    <name>nuls.roll</name>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <java.version>8</java.version>
+        <maven.compiler.source>${java.version}</maven.compiler.source>
+        <maven.compiler.target>${java.version}</maven.compiler.target>
+        <sender.address>TTaouD5qqJGpZE9BP2g9bpZbTSnYgxyS</sender.address>
+        <sender.password>deepika7252</sender.password>
+        <sender.privateKey></sender.privateKey>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>io.nuls.sdk</groupId>
+            <artifactId>sdk-contract-vm</artifactId>
+            <version>1.2.1</version>
+        </dependency>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.11</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>io.nuls.ccc</groupId>
+                <artifactId>nuls-sc-maven-plugin</artifactId>
+                <version>1.0.0</version>
+                <configuration>
+                    <sender>${sender.address}</sender>
+                    <password>${sender.password}</password>
+                    <privateKey>${sender.privateKey}</privateKey>
+                </configuration>
+                <executions>
+                    <execution>
+                        <phase>install</phase>
+                        <goals>
+                            <goal>deploy-contract</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+                <configuration>
+                    <excludes>**/*.xml</excludes>
+                    <excludes>*.xml</excludes>
+                    <excludes>**/*.properties</excludes>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>3.0.0-M3</version>
+                <dependencies>
+                    <dependency>
+                        <groupId>org.apache.maven.surefire</groupId>
+                        <artifactId>surefire-junit47</artifactId>
+                        <version>3.0.0-M3</version>
+                    </dependency>
+                </dependencies>
+            </plugin>
+        </plugins>
+    </build>
+</project>
