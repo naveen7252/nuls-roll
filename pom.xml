@@ -12,8 +12,8 @@
         <java.version>8</java.version>
         <maven.compiler.source>${java.version}</maven.compiler.source>
         <maven.compiler.target>${java.version}</maven.compiler.target>
-        <sender.address>TTaouD5qqJGpZE9BP2g9bpZbTSnYgxyS</sender.address>
-        <sender.password>deepika7252</sender.password>
+        <sender.address></sender.address>
+        <sender.password></sender.password>
         <sender.privateKey></sender.privateKey>
     </properties>
 
