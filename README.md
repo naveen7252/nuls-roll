@@ -4,7 +4,7 @@
 - Front end game application calls this contract to roll the dice.
 - Player selects number between 1 to 100 and calls rollDice method.Smart Contract generated random number between 1 to 100 and if the user  selected number is less than the generated number then contract sends the winning amount to the player instantly.
 
-Smart Contract has following methods:
+### Smart Contract has following methods:
 
 1. fundContract() : Owner(contract creator) of the contract can deposit NULS to contract address. Only owner can deposit
 2. withdrawFromContract(amount): Amount can be withdrawn from Contract. Only owner of the contract can wothdraw
