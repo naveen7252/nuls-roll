@@ -21,7 +21,7 @@
       finalReward = rewardAmount - (1% commission of rewardAmount)
       
       Example: betAmount = 10 NULS , SelectedNumber = 26
-      rewardAmount = 100/(26-1) * 10
+      rewardAmount = 100/(26-1) * 10 = 40
       finalReward  = 40 - (1% of 40) = 39.6
       
       
@@ -29,4 +29,4 @@
  - Minimum bet amount is 1 NULS
  - maximum bet amount is 100 NULS
  
- Looking for someone to build UI for this smart contract.
+ Looking for contributions to build UI for this smart contract.
